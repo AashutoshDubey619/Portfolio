@@ -1,0 +1,137 @@
+.page5{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 150px;
+    height: 400px;
+}
+
+.page5 .contact,.msg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.page5 .contact button,.msg button{
+    width: 250px;
+    font-weight: bold;
+    color:white;
+    background: linear-gradient(135deg, #ff4e50, #c40000, #4d0000);
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    border-radius: 2px 10px;
+    box-shadow: 5px 5px 5px 5px black;
+    cursor: pointer;
+    transition: transform 0.1s ease ;
+}
+
+
+.page5 .contact button:hover,.msg button:hover{
+    transform: scale(1.1);
+}
+
+
+.page5 .contact{ 
+    margin-left: 80px;
+}
+
+.page5 .contact .cicons{
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.page5 .contact .cicons img:hover{
+      transform: scale(1.1);
+}
+
+.page5 .contact .phn{ 
+    display: flex;
+}
+
+
+.page5 .msg{
+    margin-top: 50px;
+    margin-right: 80px;
+}
+
+.page5 .msg input{
+    border-radius: 5px;
+    background: linear-gradient(to top left, #2c3e50, #bdc3c7);
+    height: 30px;
+    width: 500px;
+}
+
+.page5 .msg textarea{
+    padding: 5px;
+     background: linear-gradient(to top left, #2c3e50, #bdc3c7);
+    height: 150px;
+    width: 500px;
+    border-radius: 20px;
+}
+
+.page5 .msg input::placeholder,textarea::placeholder{
+    color: white;
+    opacity: 1;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .page5 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin: 40px 0;
+  }
+
+  .page5 .contact,
+  .page5 .msg {
+    width: 90%;
+    margin: 20px 0;
+    align-items: center;
+  }
+
+  .page5 .msg input,
+  .page5 .msg textarea {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .page5 {
+    gap: 30px; /* Flexbox me gap add kiya */
+    margin-bottom: 80px;
+  }
+
+  .page5 .contact,
+  .page5 .msg {
+    width: 95%;
+    margin: 20px 0;
+    align-items: center;
+    gap: 20px; /* Inke andar bhi thoda gap */
+  }
+
+  .page5 .contact .cicons {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .page5 .msg input,
+  .page5 .msg textarea {
+    width: 100%;
+  }
+
+  /* Agar buttons ko thoda neeche lana hai */
+  .page5 .contact button,
+  .page5 .msg button {
+    width: 100%;
+    max-width: 300px;
+  }
+}

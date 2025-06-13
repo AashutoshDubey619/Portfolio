@@ -1,0 +1,157 @@
+.mainbox .page4{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 150px;
+}
+
+.mainbox .page4 button{
+    margin-top: 80px;
+    width: 150px;
+    margin-left: 45%;
+    text-decoration: none;
+    font-weight: bold;
+    color:white;
+    background: linear-gradient(135deg, #ff4e50, #c40000, #4d0000);
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    border-radius: 2px 10px;
+    box-shadow: 5px 5px 5px 5px black;
+    cursor: pointer;
+    transition: transform 0.1s ease ;
+}
+
+.mainbox .page4 button:hover{
+    transform: scale(1.1);
+}
+
+.page4 .workbox{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page4 .workbox .work{
+    height: 500px;
+    width: 350px;
+    box-shadow: 2px 5px black;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.page4 .workbox .work:hover{
+    transform: scale(1.05);
+}
+
+
+.page4 .workbox .work img{
+    height: 500px;
+    width: 350px;
+    border-radius: 25px;
+    z-index: 0;
+}
+
+.page4 .workbox .work h2{
+    position: relative;
+    bottom: 300px;
+    margin-left: 90px;
+    z-index: 1;
+}
+
+.page4 .workbox .work .info{
+    text-align: center;
+    position: relative;
+    z-index: -1;
+    bottom: 200px;
+    transition: z-index 1s  0.1s ease-in;
+}
+
+
+.page4 .workbox .work:hover .info{
+    z-index: 1;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .page4 .workbox {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .page4 .workbox .work {
+    width: 90%;
+    height: auto;
+  }
+
+  .page4 .workbox .work img {
+    width: 100%;
+    height: auto;
+  }
+
+  .page4 .workbox .work h2 {
+    bottom: 50px;
+    margin-left: 20px;
+  }
+
+  .page4 .workbox .work .info {
+    bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .page4 {
+    text-align: center;
+  }
+
+  .page4 .workbox {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .page4 .workbox .work {
+    width: 370px; /* ✅ fixed width instead of 90% or 95% */
+    height: auto;
+    box-shadow: 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .page4 .workbox .work img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+  }
+
+  .page4 .workbox .work h2 {
+    position: static;
+    margin: 10px 0 5px 0;
+    text-align: center;
+  }
+
+  .page4 .workbox .work .info {
+    position: static;
+    z-index: 1;
+    text-align: center;
+    transition: none;
+  }
+
+  .page4 .workbox .work:hover {
+    transform: none;
+  }
+
+  .mainbox .page4 button {
+    width: 150px;
+    margin: 80px auto 0 auto;
+    display: block;
+    text-align: center;
+  }
+}
